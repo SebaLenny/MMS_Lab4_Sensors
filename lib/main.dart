@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sensors/Utility/strings.dart';
-import 'package:sensors/menu_drawer.dart';
+
+import 'Utility/strings.dart';
+import 'menu_drawer.dart';
 
 void main() => runApp(MyApp());
 
