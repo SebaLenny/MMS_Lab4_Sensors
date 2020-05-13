@@ -7,4 +7,8 @@ class Strings {
   static String get authorStudentID => "228199";
   static String get back => "Back";
   static String get submit => 'Submit';
+  static String get sensorsList => 'Sensors list';
+  static String get accelerometer => 'Accelerometer';
+  static String get userAccelerometer => 'User Accelerometer';
+  static String get gyroscope => 'Gyroscope';
 }
