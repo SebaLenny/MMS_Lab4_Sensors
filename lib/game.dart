@@ -12,7 +12,7 @@ class Game extends StatefulWidget {
   final double ballRadious = 25;
   final GameVector position = GameVector(200, 200);
   final GameVector velocity = GameVector(0, 0);
-  final snackBar = SnackBar(content: Text('You failed! Games reset itself!'));
+  final snackBar = SnackBar(content: Text(Strings.gameFailedMessage));
   final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   Game();
@@ -37,7 +37,6 @@ class _GameState extends State<Game> {
     }
     var x = _accelerometerValues != null ? -_accelerometerValues[0] / 20 : 0;
     var y = _accelerometerValues != null ? _accelerometerValues[1] / 20 : 0;
-    print('Velocity $x, $y');
     setState(() {
       widget.velocity.x += x;
       widget.velocity.y += y;
@@ -49,7 +48,6 @@ class _GameState extends State<Game> {
   }
 
   void resetGame() {
-    print("oof");
     widget.scaffoldKey.currentState.showSnackBar(widget.snackBar);
     widget.position.x = 200;
     widget.position.y = 200;

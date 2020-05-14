@@ -13,4 +13,5 @@ class Strings {
   static String get userAccelerometer => 'User Accelerometer';
   static String get gyroscope => 'Gyroscope';
   static String get goToGame => 'Go to game!';
+  static String get gameFailedMessage => 'You failed! Games reset itself!';
 }
