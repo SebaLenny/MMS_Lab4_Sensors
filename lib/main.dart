@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:sensors/sensors.dart';
 import 'package:sensors_project/Utility/dimens.dart';
+import 'package:sensors_project/game.dart';
 
 import 'Utility/dimens.dart';
 import 'Utility/strings.dart';
@@ -99,6 +100,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             padding: EdgeInsets.all(Dimens.standardDistance),
           ),
+          RaisedButton(
+            child: Text(Strings.goToGame),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Game(),
+                ),
+              );
+            },
+          )
         ],
       )),
     );
